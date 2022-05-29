@@ -10,9 +10,9 @@
 		18E598502843B8B100B157FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E5984F2843B8B100B157FC /* AppDelegate.swift */; };
 		18E598522843B8B100B157FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E598512843B8B100B157FC /* SceneDelegate.swift */; };
 		18E598542843B8B100B157FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E598532843B8B100B157FC /* ViewController.swift */; };
-		18E598572843B8B100B157FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E598552843B8B100B157FC /* Main.storyboard */; };
 		18E598592843B8B400B157FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E598582843B8B400B157FC /* Assets.xcassets */; };
 		18E5985C2843B8B400B157FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E5985A2843B8B400B157FC /* LaunchScreen.storyboard */; };
+		18FF51CF2843BAB1008E9980 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FF51CE2843BAB1008E9980 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +20,10 @@
 		18E5984F2843B8B100B157FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18E598512843B8B100B157FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		18E598532843B8B100B157FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		18E598562843B8B100B157FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18E598582843B8B400B157FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18E5985B2843B8B400B157FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18E5985D2843B8B400B157FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18FF51CE2843BAB1008E9980 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +59,10 @@
 				18E5984F2843B8B100B157FC /* AppDelegate.swift */,
 				18E598512843B8B100B157FC /* SceneDelegate.swift */,
 				18E598532843B8B100B157FC /* ViewController.swift */,
-				18E598552843B8B100B157FC /* Main.storyboard */,
 				18E598582843B8B400B157FC /* Assets.xcassets */,
 				18E5985A2843B8B400B157FC /* LaunchScreen.storyboard */,
 				18E5985D2843B8B400B157FC /* Info.plist */,
+				18FF51CE2843BAB1008E9980 /* Main.storyboard */,
 			);
 			path = "iOS-JuiceMakerRxSwift";
 			sourceTree = "<group>";
@@ -127,7 +127,7 @@
 			files = (
 				18E5985C2843B8B400B157FC /* LaunchScreen.storyboard in Resources */,
 				18E598592843B8B400B157FC /* Assets.xcassets in Resources */,
-				18E598572843B8B100B157FC /* Main.storyboard in Resources */,
+				18FF51CF2843BAB1008E9980 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,14 +147,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		18E598552843B8B100B157FC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				18E598562843B8B100B157FC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		18E5985A2843B8B400B157FC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -303,7 +295,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -330,7 +322,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
