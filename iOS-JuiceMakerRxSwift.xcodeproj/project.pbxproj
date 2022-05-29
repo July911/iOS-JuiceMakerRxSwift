@@ -9,21 +9,26 @@
 /* Begin PBXBuildFile section */
 		18E598502843B8B100B157FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E5984F2843B8B100B157FC /* AppDelegate.swift */; };
 		18E598522843B8B100B157FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E598512843B8B100B157FC /* SceneDelegate.swift */; };
-		18E598542843B8B100B157FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E598532843B8B100B157FC /* ViewController.swift */; };
+		18E598542843B8B100B157FC /* JuiceOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E598532843B8B100B157FC /* JuiceOrderViewController.swift */; };
 		18E598592843B8B400B157FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E598582843B8B400B157FC /* Assets.xcassets */; };
 		18E5985C2843B8B400B157FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E5985A2843B8B400B157FC /* LaunchScreen.storyboard */; };
 		18FF51CF2843BAB1008E9980 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FF51CE2843BAB1008E9980 /* Main.storyboard */; };
+		18FF51D22843BC18008E9980 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 18FF51D12843BC18008E9980 /* RxCocoa */; };
+		18FF51D42843BC18008E9980 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 18FF51D32843BC18008E9980 /* RxRelay */; };
+		18FF51D62843BC18008E9980 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 18FF51D52843BC18008E9980 /* RxSwift */; };
+		18FF51D82843BCCA008E9980 /* EditStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FF51D72843BCCA008E9980 /* EditStockViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		18E5984C2843B8B100B157FC /* iOS-JuiceMakerRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-JuiceMakerRxSwift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E5984F2843B8B100B157FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18E598512843B8B100B157FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		18E598532843B8B100B157FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		18E598532843B8B100B157FC /* JuiceOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceOrderViewController.swift; sourceTree = "<group>"; };
 		18E598582843B8B400B157FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18E5985B2843B8B400B157FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18E5985D2843B8B400B157FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18FF51CE2843BAB1008E9980 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		18FF51D72843BCCA008E9980 /* EditStockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStockViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18FF51D62843BC18008E9980 /* RxSwift in Frameworks */,
+				18FF51D42843BC18008E9980 /* RxRelay in Frameworks */,
+				18FF51D22843BC18008E9980 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,11 +66,12 @@
 			children = (
 				18E5984F2843B8B100B157FC /* AppDelegate.swift */,
 				18E598512843B8B100B157FC /* SceneDelegate.swift */,
-				18E598532843B8B100B157FC /* ViewController.swift */,
+				18E598532843B8B100B157FC /* JuiceOrderViewController.swift */,
 				18E598582843B8B400B157FC /* Assets.xcassets */,
 				18E5985A2843B8B400B157FC /* LaunchScreen.storyboard */,
 				18E5985D2843B8B400B157FC /* Info.plist */,
 				18FF51CE2843BAB1008E9980 /* Main.storyboard */,
+				18FF51D72843BCCA008E9980 /* EditStockViewController.swift */,
 			);
 			path = "iOS-JuiceMakerRxSwift";
 			sourceTree = "<group>";
@@ -83,6 +92,11 @@
 			dependencies = (
 			);
 			name = "iOS-JuiceMakerRxSwift";
+			packageProductDependencies = (
+				18FF51D12843BC18008E9980 /* RxCocoa */,
+				18FF51D32843BC18008E9980 /* RxRelay */,
+				18FF51D52843BC18008E9980 /* RxSwift */,
+			);
 			productName = "iOS-JuiceMakerRxSwift";
 			productReference = 18E5984C2843B8B100B157FC /* iOS-JuiceMakerRxSwift.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 18E598432843B8B100B157FC;
+			packageReferences = (
+				18FF51D02843BC18008E9980 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 18E5984D2843B8B100B157FC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +155,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18E598542843B8B100B157FC /* ViewController.swift in Sources */,
+				18E598542843B8B100B157FC /* JuiceOrderViewController.swift in Sources */,
+				18FF51D82843BCCA008E9980 /* EditStockViewController.swift in Sources */,
 				18E598502843B8B100B157FC /* AppDelegate.swift in Sources */,
 				18E598522843B8B100B157FC /* SceneDelegate.swift in Sources */,
 			);
@@ -348,6 +366,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		18FF51D02843BC18008E9980 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		18FF51D12843BC18008E9980 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18FF51D02843BC18008E9980 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		18FF51D32843BC18008E9980 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18FF51D02843BC18008E9980 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		18FF51D52843BC18008E9980 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18FF51D02843BC18008E9980 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 18E598442843B8B100B157FC /* Project object */;
 }
