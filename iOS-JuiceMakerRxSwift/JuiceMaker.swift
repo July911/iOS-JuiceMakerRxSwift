@@ -6,8 +6,26 @@
 //
 
 import Foundation
+import RxSwift
 
 final class JuiceMaker {
     
+    let repository = FruitStorage.shared
     
+    func makeJuice(ingredient: Juice) -> Completable {
+        var juiceRecipe = ingredient.recipe
+            juiceRecipe.forEach {
+                juiceRecipe.updateValue($0.value * -1, forKey: $0.key)
+            }
+        return self.repository.update(ingredient: juiceRecipe)
+    }
+    
+    func modifyStock(fruit: Fruit, amount: Int) -> Completable {
+        let ingredient = [fruit: amount]
+        return self.repository.update(ingredient: ingredient)
+    }
+    
+    func fetchAll() -> Observable<[Fruit: Int]> {
+        return self.repository.fetchAll()
+    }
 }

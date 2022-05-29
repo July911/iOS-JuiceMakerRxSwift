@@ -35,7 +35,7 @@ final class FruitStorage {
         }
     }
     
-    func notify() -> Observable<[Fruit: Int]> {
+    func fetchAll() -> Observable<[Fruit: Int]> {
         return self.fruitStore.asObservable()
     }
 }
