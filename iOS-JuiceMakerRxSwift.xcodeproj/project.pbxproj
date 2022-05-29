@@ -21,6 +21,7 @@
 		18FF51DC2843C1BE008E9980 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FF51DB2843C1BE008E9980 /* Fruit.swift */; };
 		18FF51DE2843D6D7008E9980 /* JuiceMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FF51DD2843D6D7008E9980 /* JuiceMaker.swift */; };
 		18FF51E02843D6FA008E9980 /* Juice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FF51DF2843D6FA008E9980 /* Juice.swift */; };
+		18FF51E22843DBCF008E9980 /* EditStockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FF51E12843DBCF008E9980 /* EditStockViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		18FF51DB2843C1BE008E9980 /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
 		18FF51DD2843D6D7008E9980 /* JuiceMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMaker.swift; sourceTree = "<group>"; };
 		18FF51DF2843D6FA008E9980 /* Juice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Juice.swift; sourceTree = "<group>"; };
+		18FF51E12843DBCF008E9980 /* EditStockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStockViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				18FF51DB2843C1BE008E9980 /* Fruit.swift */,
 				18FF51DD2843D6D7008E9980 /* JuiceMaker.swift */,
 				18FF51DF2843D6FA008E9980 /* Juice.swift */,
+				18FF51E12843DBCF008E9980 /* EditStockViewModel.swift */,
 			);
 			path = "iOS-JuiceMakerRxSwift";
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				18FF51DA2843C151008E9980 /* FruitStroage.swift in Sources */,
 				18FF51D82843BCCA008E9980 /* EditStockViewController.swift in Sources */,
 				18E598502843B8B100B157FC /* AppDelegate.swift in Sources */,
+				18FF51E22843DBCF008E9980 /* EditStockViewModel.swift in Sources */,
 				18FF51E02843D6FA008E9980 /* Juice.swift in Sources */,
 				18E598522843B8B100B157FC /* SceneDelegate.swift in Sources */,
 			);

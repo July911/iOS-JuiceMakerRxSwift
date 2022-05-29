@@ -18,21 +18,25 @@ final class FruitStorage {
     //TODO: 소비 , 현재 재고 , 수정 crud
     
     func update(ingredient: [Fruit: Int]) -> Completable { // subject -> single -> flatMapcompletable
-        return self.fruitStore.asSingle().flatMapCompletable { [weak self] stock -> Completable in
-            return Completable.create { completable in
-                var each = stock
-                ingredient.forEach { value in
-                    if each[value.key]! + value.value < 0 {
-                        completable(.error(StockError.fail))
-                    }
-                    each[value.key]! += value.value
-                }
-                self?.fruitStore.onNext(each)
-                completable(.completed)
-                
+        Completable.create { [weak self] completable in
+            guard let currentValue = try? self?.fruitStore.value()
+            else {
+                completable(.error(StockError.fail))
                 return Disposables.create()
             }
+            var newStock = currentValue
+            ingredient.forEach { value in
+                guard newStock[value.key]! + value.value > 0 else {
+                    completable(.error(StockError.fail))
+                    return
+                }
+                newStock[value.key]! += value.value
+            } //물마시고옴 ㅎㅎ 
+            self?.fruitStore.onNext(newStock)
+            completable(.completed)
+            return Disposables.create()
         }
+        
     }
     
     func fetchAll() -> Observable<[Fruit: Int]> {
