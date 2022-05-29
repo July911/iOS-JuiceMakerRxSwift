@@ -17,6 +17,8 @@
 		18FF51D42843BC18008E9980 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 18FF51D32843BC18008E9980 /* RxRelay */; };
 		18FF51D62843BC18008E9980 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 18FF51D52843BC18008E9980 /* RxSwift */; };
 		18FF51D82843BCCA008E9980 /* EditStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FF51D72843BCCA008E9980 /* EditStockViewController.swift */; };
+		18FF51DA2843C151008E9980 /* FruitStroage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FF51D92843C151008E9980 /* FruitStroage.swift */; };
+		18FF51DC2843C1BE008E9980 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FF51DB2843C1BE008E9980 /* Fruit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		18E5985D2843B8B400B157FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18FF51CE2843BAB1008E9980 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		18FF51D72843BCCA008E9980 /* EditStockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStockViewController.swift; sourceTree = "<group>"; };
+		18FF51D92843C151008E9980 /* FruitStroage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitStroage.swift; sourceTree = "<group>"; };
+		18FF51DB2843C1BE008E9980 /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 				18E5985D2843B8B400B157FC /* Info.plist */,
 				18FF51CE2843BAB1008E9980 /* Main.storyboard */,
 				18FF51D72843BCCA008E9980 /* EditStockViewController.swift */,
+				18FF51D92843C151008E9980 /* FruitStroage.swift */,
+				18FF51DB2843C1BE008E9980 /* Fruit.swift */,
 			);
 			path = "iOS-JuiceMakerRxSwift";
 			sourceTree = "<group>";
@@ -155,7 +161,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18FF51DC2843C1BE008E9980 /* Fruit.swift in Sources */,
 				18E598542843B8B100B157FC /* JuiceOrderViewController.swift in Sources */,
+				18FF51DA2843C151008E9980 /* FruitStroage.swift in Sources */,
 				18FF51D82843BCCA008E9980 /* EditStockViewController.swift in Sources */,
 				18E598502843B8B100B157FC /* AppDelegate.swift in Sources */,
 				18E598522843B8B100B157FC /* SceneDelegate.swift in Sources */,
