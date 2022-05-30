@@ -12,12 +12,12 @@ final class JuiceMaker {
     
     let repository = FruitStorage.shared
     
-    func makeJuice(ingredient: Juice) -> Completable {
+    func makeJuice(ingredient: Juice) -> Observable<Juice> {
         var juiceRecipe = ingredient.recipe
             juiceRecipe.forEach {
                 juiceRecipe.updateValue($0.value * -1, forKey: $0.key)
             }
-        return self.repository.update(ingredient: juiceRecipe)
+        return self.repository.update(ingredient: juiceRecipe).andThen(Observable.just(ingredient))
     }
     
     func modifyStock(fruit: Fruit, amount: Int) -> Completable {
