@@ -25,15 +25,20 @@ final class FruitStorage {
                 return Disposables.create()
             }
             var newStock = currentValue
+            var isFail = false
             ingredient.forEach { value in
-                guard newStock[value.key]! + value.value > 0 else {
-                    completable(.error(StockError.fail))
+                guard newStock[value.key]! + value.value >= 0 else {
+                    isFail = true
                     return
                 }
                 newStock[value.key]! += value.value
-            } //물마시고옴 ㅎㅎ 
-            self?.fruitStore.onNext(newStock)
-            completable(.completed)
+            }
+            if isFail {
+                completable(.error(StockError.fail))
+            } else {
+                self?.fruitStore.onNext(newStock)
+                completable(.completed)
+            }
             return Disposables.create()
         }
         
@@ -44,6 +49,10 @@ final class FruitStorage {
     }
 }
 
-enum StockError: Error {
+enum StockError: LocalizedError {
     case fail
+
+    var errorDescription: String? {
+        return "재고가 부족합니다."
+    }
 }

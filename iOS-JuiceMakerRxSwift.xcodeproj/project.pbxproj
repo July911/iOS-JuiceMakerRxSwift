@@ -22,6 +22,7 @@
 		18FF51DE2843D6D7008E9980 /* JuiceMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FF51DD2843D6D7008E9980 /* JuiceMaker.swift */; };
 		18FF51E02843D6FA008E9980 /* Juice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FF51DF2843D6FA008E9980 /* Juice.swift */; };
 		18FF51E22843DBCF008E9980 /* EditStockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FF51E12843DBCF008E9980 /* EditStockViewModel.swift */; };
+		33870DC92843F3A2009BDE83 /* JuiceOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33870DC82843F3A2009BDE83 /* JuiceOrderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		18FF51DD2843D6D7008E9980 /* JuiceMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMaker.swift; sourceTree = "<group>"; };
 		18FF51DF2843D6FA008E9980 /* Juice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Juice.swift; sourceTree = "<group>"; };
 		18FF51E12843DBCF008E9980 /* EditStockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStockViewModel.swift; sourceTree = "<group>"; };
+		33870DC82843F3A2009BDE83 /* JuiceOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceOrderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,16 +79,17 @@
 				18E5984F2843B8B100B157FC /* AppDelegate.swift */,
 				18E598512843B8B100B157FC /* SceneDelegate.swift */,
 				18E598532843B8B100B157FC /* JuiceOrderViewController.swift */,
+				33870DC82843F3A2009BDE83 /* JuiceOrderViewModel.swift */,
 				18E598582843B8B400B157FC /* Assets.xcassets */,
 				18E5985A2843B8B400B157FC /* LaunchScreen.storyboard */,
 				18E5985D2843B8B400B157FC /* Info.plist */,
 				18FF51CE2843BAB1008E9980 /* Main.storyboard */,
 				18FF51D72843BCCA008E9980 /* EditStockViewController.swift */,
+				18FF51E12843DBCF008E9980 /* EditStockViewModel.swift */,
 				18FF51D92843C151008E9980 /* FruitStroage.swift */,
 				18FF51DB2843C1BE008E9980 /* Fruit.swift */,
 				18FF51DD2843D6D7008E9980 /* JuiceMaker.swift */,
 				18FF51DF2843D6FA008E9980 /* Juice.swift */,
-				18FF51E12843DBCF008E9980 /* EditStockViewModel.swift */,
 			);
 			path = "iOS-JuiceMakerRxSwift";
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				18FF51D82843BCCA008E9980 /* EditStockViewController.swift in Sources */,
 				18E598502843B8B100B157FC /* AppDelegate.swift in Sources */,
 				18FF51E22843DBCF008E9980 /* EditStockViewModel.swift in Sources */,
+				33870DC92843F3A2009BDE83 /* JuiceOrderViewModel.swift in Sources */,
 				18FF51E02843D6FA008E9980 /* Juice.swift in Sources */,
 				18E598522843B8B100B157FC /* SceneDelegate.swift in Sources */,
 			);
@@ -246,7 +250,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -300,7 +304,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -317,6 +321,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TLS95R65C2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS-JuiceMakerRxSwift/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -344,6 +349,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TLS95R65C2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS-JuiceMakerRxSwift/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
