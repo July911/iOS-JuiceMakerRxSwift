@@ -46,25 +46,24 @@ final class JuiceOrderViewModel {
 
         let starwberryOrderResult = input.strawberryOrderButtonDidTapped
             .flatMap { self.juiceMaker.makeJuice(ingredient: .strawberryJuice).map { String($0.name) }.asDriver(onErrorJustReturn: "재고없음") }
-            .debug()
 
-        let kiwiOrderResult = input.strawberryOrderButtonDidTapped
-            .flatMap { self.juiceMaker.makeJuice(ingredient: .kiwiJuice).asDriverOnErrorJustComplete() }
+        let kiwiOrderResult = input.kiwiOrderButtonDidTapped
+            .flatMap { self.juiceMaker.makeJuice(ingredient: .kiwiJuice).map { String($0.name) }.asDriver(onErrorJustReturn: "재고없음") }
 
-        let mangoOrderResult = input.strawberryOrderButtonDidTapped
-            .flatMap { self.juiceMaker.makeJuice(ingredient: .mangoJuice).asDriverOnErrorJustComplete() }
+        let mangoOrderResult = input.mangoOrderButtonDidTapped
+            .flatMap { self.juiceMaker.makeJuice(ingredient: .mangoJuice).map { String($0.name) }.asDriver(onErrorJustReturn: "재고없음") }
 
-        let pineappleOrderResult = input.strawberryOrderButtonDidTapped
-            .flatMap { self.juiceMaker.makeJuice(ingredient: .pineappleJuice).asDriverOnErrorJustComplete() }
+        let pineappleOrderResult = input.pineappleOrderButtonDidTapped
+            .flatMap { self.juiceMaker.makeJuice(ingredient: .pineappleJuice).map { String($0.name) }.asDriver(onErrorJustReturn: "재고없음") }
 
-        let bananaOrderResult = input.strawberryOrderButtonDidTapped
-            .flatMap { self.juiceMaker.makeJuice(ingredient: .bananaJuice).asDriverOnErrorJustComplete() }
+        let bananaOrderResult = input.bananaOrderButtonDidTapped
+            .flatMap { self.juiceMaker.makeJuice(ingredient: .bananaJuice).map { String($0.name) }.asDriver(onErrorJustReturn: "재고없음") }
 
         let mangoKiwiOrderResult = input.mangoKiwiOrderButtonDidTapped
-            .flatMap { self.juiceMaker.makeJuice(ingredient: .mangoKiwiJuice).asDriverOnErrorJustComplete() }
+            .flatMap { self.juiceMaker.makeJuice(ingredient: .mangoKiwiJuice).map { String($0.name) }.asDriver(onErrorJustReturn: "재고없음") }
 
         let strawberryBananaOrderResult = input.strawberryBananaOrderButtonDidTapped
-            .flatMap { self.juiceMaker.makeJuice(ingredient: .strawberryBananaJuice).asDriverOnErrorJustComplete() }
+            .flatMap { self.juiceMaker.makeJuice(ingredient: .strawberryBananaJuice).map { String($0.name) }.asDriver(onErrorJustReturn: "재고없음") }
 
         let orderResults = Driver.merge(
             starwberryOrderResult,
@@ -74,33 +73,30 @@ final class JuiceOrderViewModel {
             bananaOrderResult,
             mangoKiwiOrderResult,
             strawberryBananaOrderResult
-        ).map {
-            $0.name
-        }.asDriver(onErrorJustReturn: "재고가 부족합니다.")
-            .debug()
-
+        )
+        
         let allStock = input.viewWillAppear
             .flatMap { self.juiceMaker.fetchAll() }
             .asDriver(onErrorJustReturn: [:])
 
         let strawberryValue = allStock
-            .map { $0[.strawberry, default: 0] }
+            .compactMap { $0[.strawberry] }
             .map(String.init)
 
         let kiwiValue = allStock
-            .map { $0[.kiwi, default: 0] }
+            .compactMap { $0[.kiwi] }
             .map(String.init)
 
         let mangoValue = allStock
-            .map { $0[.mango, default: 0] }
+            .compactMap { $0[.mango] }
             .map(String.init)
 
         let pineappleValue = allStock
-            .map { $0[.pineapple, default: 0] }
+            .compactMap { $0[.pineapple] }
             .map(String.init)
 
         let bananaValue = allStock
-            .map { $0[.banana, default: 0] }
+            .compactMap { $0[.banana] }
             .map(String.init)
 
         return Output(
@@ -111,24 +107,5 @@ final class JuiceOrderViewModel {
             bananaValue: bananaValue,
             orderResult: orderResults
         )
-    }
-}
-
-extension ObservableType {
-
-    func catchErrorJustComplete() -> Observable<Element> {
-        return catchError { _ in
-            return Observable.empty()
-        }
-    }
-
-    func asDriverOnErrorJustComplete() -> Driver<Element> {
-        return asDriver { error in
-            return Driver.empty()
-        }
-    }
-
-    func mapToVoid() -> Observable<Void> {
-        return map { _ in }
     }
 }

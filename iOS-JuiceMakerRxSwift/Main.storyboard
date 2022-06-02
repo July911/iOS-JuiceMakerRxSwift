@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DCG-dP-Fms">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DCG-dP-Fms">
     <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -402,15 +402,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="재고 추가" id="s2S-sA-aIl">
-                        <barButtonItem key="rightBarButtonItem" title="닫기" id="Ssw-n4-fDK">
-                            <connections>
-                                <action selector="completeModifyButton:" destination="Yu1-lM-nqp" id="Rw5-iU-wXs"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="닫기" id="Ssw-n4-fDK"/>
                     </navigationItem>
                     <connections>
                         <outlet property="bananaLabel" destination="gKu-86-RhI" id="eCs-4o-aDh"/>
                         <outlet property="bananaStepper" destination="O5s-2N-3iP" id="XcI-GB-TeY"/>
+                        <outlet property="closeButtonItem" destination="Ssw-n4-fDK" id="MmS-aQ-QoC"/>
                         <outlet property="kiwiLabel" destination="ZDv-1m-HBY" id="RB6-Hl-3so"/>
                         <outlet property="kiwiStepper" destination="klA-59-Nu4" id="Y2x-hq-HRh"/>
                         <outlet property="mangoLabel" destination="MpT-VW-hCb" id="mw2-Dc-IAE"/>

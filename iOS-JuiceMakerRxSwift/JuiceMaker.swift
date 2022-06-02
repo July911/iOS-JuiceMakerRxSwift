@@ -20,9 +20,9 @@ final class JuiceMaker {
         return self.repository.update(ingredient: juiceRecipe).andThen(Observable.just(ingredient))
     }
     
-    func modifyStock(fruit: Fruit, amount: Int) -> Completable {
+    func modifyStock(fruit: Fruit, amount: Int) -> Observable<Void> {
         let ingredient = [fruit: amount]
-        return self.repository.update(ingredient: ingredient)
+        return self.repository.update(ingredient: ingredient).andThen(Observable.just(()))
     }
     
     func fetchAll() -> Observable<[Fruit: Int]> {

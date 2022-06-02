@@ -17,7 +17,7 @@ final class FruitStorage {
     
     //TODO: 소비 , 현재 재고 , 수정 crud
     
-    func update(ingredient: [Fruit: Int]) -> Completable { // subject -> single -> flatMapcompletable
+    func update(ingredient: [Fruit: Int]) -> Completable {
         Completable.create { [weak self] completable in
             guard let currentValue = try? self?.fruitStore.value()
             else {
@@ -43,7 +43,7 @@ final class FruitStorage {
         }
         
     }
-    
+
     func fetchAll() -> Observable<[Fruit: Int]> {
         return self.fruitStore.asObservable()
     }
